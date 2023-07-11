@@ -3,10 +3,10 @@ import {useEffect, useState} from "react";
 import './App.scss';
 
 import {useDispatch, useSelector} from 'react-redux';
-import {onAddInputValue,onAddTask,onActiveTask} from "../../actions";
+import {onAddInputValue,onAddTask,onActiveTask,onDeleteTask} from "../../actions";
 //1) Создание задачи: Пользователь должен иметь возможность добавлять новые задачи в список Todo. (сделано)
 //2) Редактирование задачи: Пользователь должен иметь возможность редактировать текст задачи.
-//3) Удаление задачи: Пользователь должен иметь возможность удалять задачи из списка.
+//3) Удаление задачи: Пользователь должен иметь возможность удалять задачи из списка.(сделано)
 //4) Пометка задачи как выполненной: Пользователь должен иметь возможность пометить задачу как выполненную или снять пометку.(сделано)
 export const App = () => {
     const dispatch = useDispatch();
@@ -15,6 +15,7 @@ export const App = () => {
     const tasksRender = tasks.map(item => (
         <div className='task-wrapper' key={item.id} onClick={()=>console.log(item.id)}>
             <input type="checkbox" onClick={() => dispatch(onActiveTask(item.id))}/>
+            <button onClick={() => dispatch(onDeleteTask(item.id))}>DELETE</button>
             <p>{item.id}) --- {item.descr}</p>
         </div>
     ));

@@ -27,6 +27,11 @@ const vacancies = (state = initialState, action) => {
                     return item;
                 })
             }
+        case 'DELETE_TASK':
+            return {
+                ...state,
+                tasks: state.tasks.filter(item => item.id !== action.payload)
+            }
         default: return state
     }
 }

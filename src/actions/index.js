@@ -18,3 +18,10 @@ export const onActiveTask = (id) => {
         payload: id
     }
 }
+
+export const onDeleteTask = (id) => {
+    return {
+        type: 'DELETE_TASK',
+        payload: id
+    }
+}
