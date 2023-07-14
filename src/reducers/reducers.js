@@ -1,15 +1,21 @@
-const initialState = {
-    inputValue: '',
-    editedInputValue: '',
-    tasks: [
-        {
+import { load } from 'redux-localstorage-simple';
+
+let TASKS = load({namespace: 'todo-list'});
+
+if (!TASKS || !TASKS.tasks ||!TASKS.tasks.length) {
+    TASKS = {
+        inputValue: '',
+        editedInputValue: '',
+        tasks: [{
             id:1,
             descr:'Buy milk for coffee!',
             active:false,
             activeEdit:false
-        }
-    ]
+        }],
+    }
 }
+
+const initialState = TASKS;
 
 const vacancies = (state = initialState, action) => {
     switch (action.type) {

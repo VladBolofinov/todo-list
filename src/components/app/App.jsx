@@ -1,14 +1,19 @@
-import {useEffect, useState} from "react";
-
 import './App.scss';
 
 import {useDispatch, useSelector} from 'react-redux';
-import {onAddInputValue,onAddTask,onActiveTask,onDeleteTask,onEditTask,onAddEditInputValue,onAddEditTask} from "../../actions";
+import {onAddInputValue,
+        onAddTask,
+        onActiveTask,
+        onDeleteTask,
+        onEditTask,
+        onAddEditInputValue,
+        onAddEditTask} from "../../actions";
+
 //1) Создание задачи: Пользователь должен иметь возможность добавлять новые задачи в список Todo. (сделано)
-//2) Редактирование задачи: Пользователь должен иметь возможность редактировать текст задачи.(cltkfyj)
+//2) Редактирование задачи: Пользователь должен иметь возможность редактировать текст задачи.(сделано)
 //3) Удаление задачи: Пользователь должен иметь возможность удалять задачи из списка.(сделано)
 //4) Пометка задачи как выполненной: Пользователь должен иметь возможность пометить задачу как выполненную или снять пометку.(сделано)
-//cделай сохранение стора в локал сторэдж через мидлввар
+//cделай сохранение стора в локал сторэдж через мидлввар (сделано)
 //proptypes добавь вместо тайпскрипта
 
 
