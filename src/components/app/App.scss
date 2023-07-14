@@ -1,8 +1,17 @@
 .App {
+
 }
 
 .task-wrapper {
   margin-top: 15px;
   background-color: yellow;
   border: solid 1px firebrick;
+}
+
+.edit-modal {
+  display: none;
+}
+.active {
+  display: block;
+  margin-top: 5px;
 }

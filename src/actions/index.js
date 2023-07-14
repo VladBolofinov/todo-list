@@ -25,3 +25,27 @@ export const onDeleteTask = (id) => {
         payload: id
     }
 }
+
+export const onEditTask = (id,value) => {
+    return {
+        type: 'EDIT_TASK',
+        payload: {
+            id,
+            value
+        }
+    }
+}
+
+export const onAddEditInputValue = (value) => {
+    return {
+        type: 'EDIT_INPUT_VALUE',
+        payload: value
+    }
+}
+
+export const onAddEditTask = (id) =>{
+    return {
+        type: 'ADD_EDIT_TASK',
+        payload: id
+    }
+}
