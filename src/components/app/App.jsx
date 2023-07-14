@@ -1,5 +1,4 @@
 import './App.scss';
-
 import {useDispatch, useSelector} from 'react-redux';
 import {onAddInputValue,
         onAddTask,
@@ -9,11 +8,11 @@ import {onAddInputValue,
         onAddEditInputValue,
         onAddEditTask} from "../../actions";
 
-//1) Создание задачи: Пользователь должен иметь возможность добавлять новые задачи в список Todo. (сделано)
-//2) Редактирование задачи: Пользователь должен иметь возможность редактировать текст задачи.(сделано)
-//3) Удаление задачи: Пользователь должен иметь возможность удалять задачи из списка.(сделано)
-//4) Пометка задачи как выполненной: Пользователь должен иметь возможность пометить задачу как выполненную или снять пометку.(сделано)
-//cделай сохранение стора в локал сторэдж через мидлввар (сделано)
+import { Checkbox } from '@mantine/core';
+
+
+
+
 //proptypes добавь вместо тайпскрипта
 
 
@@ -23,7 +22,12 @@ export const App = () => {
 
     const tasksRender = tasks.map(item => (
         <div className='task-wrapper' key={item.id} onClick={()=>console.log(item.id)}>
-            <input type="checkbox" onClick={() => dispatch(onActiveTask(item.id))}/>
+            <Checkbox
+                color="green"
+                radius="sm"
+                transitionDuration="300"
+                onClick={() => dispatch(onActiveTask(item.id))}
+            />
             <button onClick={() => dispatch(onDeleteTask(item.id))}>DELETE</button>
             <button onClick={()=>dispatch(onEditTask(item.id,item.descr))}>EDIT</button>
             {item.activeEdit
@@ -37,7 +41,7 @@ export const App = () => {
                         }
                     }/>
                     </div>
-                : <p>{item.id}) --- {item.descr}</p>}
+                : <p style={item.active ? {textDecoration:'line-through'} : {textDecoration:'none'}}>{item.id}) --- {item.descr}</p>}
         </div>
     ));
     return (

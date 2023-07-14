@@ -1,10 +1,12 @@
 .App {
-
+  width: 750px;
+  display: block;
+  margin: 0 auto;
 }
 
 .task-wrapper {
   margin-top: 15px;
-  background-color: yellow;
+  background-color: #d8a9ff;
   border: solid 1px firebrick;
 }
 

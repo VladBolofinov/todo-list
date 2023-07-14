@@ -15,6 +15,8 @@ if (!TASKS || !TASKS.tasks ||!TASKS.tasks.length) {
     }
 }
 
+//баг посмотри после перезагрузки страницы чекбокс неправильно работает
+
 const initialState = TASKS;
 
 const vacancies = (state = initialState, action) => {
