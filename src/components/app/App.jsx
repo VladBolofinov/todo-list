@@ -39,6 +39,7 @@ export const App = () => {
                     <input type="text" value={editedInputValue} autoFocus={true} onChange={(e)=>{
                         dispatch(onAddEditInputValue(e.currentTarget.value));
                         }
+
                     }/>
                     </div>
                 : <p style={item.active ? {textDecoration:'line-through'} : {textDecoration:'none'}}>{item.id}) --- {item.descr}</p>}
