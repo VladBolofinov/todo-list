@@ -1,0 +1,62 @@
+.task-wrapper {
+  font-size: 20px;
+  margin-top: 15px;
+  background-color: #d8a9ff;
+  border: solid 2px firebrick;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 100px;
+  .text-wrapper {
+    width: 550px;
+    word-break: break-all;
+  }
+}
+.mantine-Input.Wrapper-root {
+  width: 500px;
+}
+.mantine-Input-input {
+  font-size: 20px;
+  padding-right: 60px;
+}
+
+.edit-modal {
+  display: none;
+}
+.active {
+  display: block;
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .task-wrapper {
+    font-size: 16px;
+    .text-wrapper {
+      width: 340px;
+    }
+  }
+  .mantine-Input-input {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .task-wrapper {
+    font-size: 14px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    flex-direction: column;
+    align-items: center;
+    .text-wrapper {
+      width: 270px;
+    }
+  }
+  .mantine-Input-input {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
