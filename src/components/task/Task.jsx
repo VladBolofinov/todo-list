@@ -38,7 +38,7 @@ export const Task = ({editedInputValue,
                                        onChange={(e)=>{dispatch(onAddEditInputValue(e.currentTarget.value));}}
                                 />
                             </>
-                        : <p style={item.active ? {textDecoration:'line-through'} : {textDecoration:'none'}}>---{item.descr}</p>}
+                        : <p style={item.active ? {textDecoration:'line-through'} : {textDecoration:'none'}}>{item.descr}</p>}
                 </div>
                 <div className="btn-wrapper">
                     <Button color="gray" radius="xl" size="xs" classNames={{ root: 'btn' }}

@@ -11,7 +11,19 @@ if (!TASKS || !TASKS.tasks ||!TASKS.tasks.length) {
             descr:'Buy milk for coffee!',
             active:false,
             activeEdit:false
-        }],
+        },
+            {
+                id:2,
+                descr:'Live long life!',
+                active:false,
+                activeEdit:false
+            },
+            {
+                id:3,
+                descr:'Get an internship!',
+                active:false,
+                activeEdit:false
+            }],
     }
 }
 
