@@ -1,4 +1,4 @@
-import { load } from 'redux-localstorage-simple';
+import {load} from 'redux-localstorage-simple';
 
 let TASKS = load({namespace: 'todo-list'});
 
@@ -14,8 +14,6 @@ if (!TASKS || !TASKS.tasks ||!TASKS.tasks.length) {
         }],
     }
 }
-
-//баг посмотри после перезагрузки страницы чекбокс неправильно работает
 
 const initialState = TASKS;
 

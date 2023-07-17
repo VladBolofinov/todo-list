@@ -1,12 +1,14 @@
-import {BsPencil} from "react-icons/bs";
-import {onAddInputValue, onAddTask} from "../../actions";
+import {onAddInputValue, onAddTask} from "../../actions/actions";
+
 import {Button, Input} from "@mantine/core";
 import {useDispatch, useSelector} from 'react-redux';
-import { HiOutlinePlus } from 'react-icons/hi';
+import {HiOutlinePlus} from 'react-icons/hi';
+import {BsPencil} from "react-icons/bs";
+import uniqid from 'uniqid';
 
 export const MainInput = () => {
     const dispatch = useDispatch();
-    const {inputValue,tasks} = useSelector(state => state);
+    const {inputValue} = useSelector(state => state);
     return (
         <div className='main-input'>
             <Input
@@ -22,7 +24,7 @@ export const MainInput = () => {
                             color="green"
                             radius="xl"
                             size="xs"
-                            onClick={()=>dispatch(onAddTask({id:tasks.length + 1, descr:`${inputValue}`, active:false}))}>
+                            onClick={()=>dispatch(onAddTask({id:uniqid(), descr:`${inputValue}`, active:false}))}>
                         <HiOutlinePlus/>
                     </Button>}
             />
