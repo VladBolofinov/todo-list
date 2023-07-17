@@ -1,14 +1,11 @@
-import {onAddInputValue, onAddTask} from "../../actions/actions";
-
 import {Button, Input} from "@mantine/core";
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import {HiOutlinePlus} from 'react-icons/hi';
 import {BsPencil} from "react-icons/bs";
 import uniqid from 'uniqid';
 
-export const MainInput = () => {
+export const MainInput = ({inputValue,onAddInputValue,onAddTask}) => {
     const dispatch = useDispatch();
-    const {inputValue} = useSelector(state => state);
     return (
         <div className='main-input'>
             <Input

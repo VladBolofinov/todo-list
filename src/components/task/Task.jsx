@@ -1,18 +1,18 @@
 import './Task.scss';
-import {onActiveTask,
-        onDeleteTask,
-        onEditTask,
-        onAddEditInputValue,
-        onAddEditTask} from "../../actions/actions";
 
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import { Checkbox, Input, Button } from '@mantine/core';
 import { AiOutlineClose } from 'react-icons/ai';
 import { FiEdit2 } from 'react-icons/fi';
 
-export const Task = () => {
+export const Task = ({editedInputValue,
+                     tasks,
+                     onActiveTask,
+                     onDeleteTask,
+                     onEditTask,
+                     onAddEditInputValue,
+                     onAddEditTask}) => {
     const dispatch = useDispatch();
-    const {editedInputValue,tasks} = useSelector(state => state);
 
     return (
         tasks.map(item => (
