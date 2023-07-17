@@ -7,7 +7,13 @@
 .task-wrapper {
   margin-top: 15px;
   background-color: #d8a9ff;
-  border: solid 1px firebrick;
+  border: solid 2px firebrick;
+  border-radius: 10px;
+}
+
+.mantine-Button-root {
+  margin-right: 10px;
+  height: 40px;
 }
 
 .edit-modal {
